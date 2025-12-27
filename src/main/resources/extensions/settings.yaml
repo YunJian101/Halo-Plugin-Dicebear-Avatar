@@ -1,0 +1,28 @@
+apiVersion: v1alpha1
+kind: Setting
+metadata:
+  name: plugin-dicebear-avatar
+spec:
+  configMapName: plugin-dicebear-avatar
+  forms:
+    - group: "general"
+      label: "基本配置"
+      formSchema:
+        - $el: div
+          attrs:
+            style: "padding: 15px; background-color: #f0f9eb; border: 1px solid #e1fae1; border-radius: 4px; color: #3c763d;"
+          children:
+            - $el: p
+              children: "使用说明："
+              attrs:
+                style: "font-weight: bold; margin-bottom: 5px;"
+            - $el: p
+              children: "请在 Halo 后台 -> 系统 -> 插件 -> 评论组件 -> 头像设置 -> 启用第三方头像 -> Gravatar 头像服务镜像地址 中填入：您的博客域名地址，非标接口记得加端口"
+            - $el: code
+              children: "例如: https://shifeiyu.cn"
+              attrs:
+                style: "display: block; background: #fff; padding: 5px; margin: 5px 0; border: 1px solid #ddd; border-radius: 3px;"
+            - $el: p
+              children: "注意：默认使用第三方 DiceBear 像素艺术 (Pixel Art) 风格API。"
+              attrs:
+                style: "margin-top: 5px; color: #8a6d3b;"

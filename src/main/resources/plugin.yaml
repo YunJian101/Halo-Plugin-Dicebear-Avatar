@@ -1,0 +1,23 @@
+apiVersion: plugin.halo.run/v1alpha1
+kind: Plugin
+metadata:
+  name: plugin-dicebear-avatar
+spec:
+  enabled: true
+  version: 1.0.1
+  displayName: "Dicebear头像"
+  logo: static/logo.svg
+  author:
+    name: "是飞鱼"
+    website: https://github.com/YunJian101
+  homepage: https://github.com/YunJian101/Halo-Plugin-Dicebear-Avatar#readme
+  repo: https://github.com/YunJian101/Halo-Plugin-Dicebear-Avatar
+  issues: https://github.com/YunJian101/Halo-Plugin-Dicebear-Avatar/issues
+  main: com.example.avatar.AvatarPlugin
+  description: "替换Halo博客评论组件中的头像，为匿名用户和未上传头像用户提供一个评论区头像"
+  requires: ">=2.21.0"
+  license:
+    - name: "GPL-3.0"
+      url: "https://github.com/YunJian101/Halo-Plugin-Dicebear-Avatar/blob/main/LICENSE"
+  settingName: plugin-dicebear-avatar
+  configMapName: plugin-dicebear-avatar
