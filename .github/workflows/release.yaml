@@ -19,8 +19,10 @@ jobs:
         with:
           java-version: '21'
           distribution: 'temurin'
-      - name: Grant execute permission for gradlew
-        run: chmod +x gradlew
+      - name: Setup Gradle
+        run: |
+          sed -i 's/\r$//' gradlew
+          chmod +x gradlew
       - name: Build with Gradle
         run: ./gradlew clean build
       - name: Create Release
