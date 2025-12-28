@@ -4,7 +4,7 @@ metadata:
   name: plugin-dicebear-avatar
 spec:
   enabled: true
-  version: 1.0.1
+  version: 1.0.3
   displayName: "Dicebear头像"
   logo: static/logo.svg
   author:

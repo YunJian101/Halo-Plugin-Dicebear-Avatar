@@ -1,13 +1,55 @@
 apiVersion: v1alpha1
 kind: Setting
 metadata:
+  # 插件配置的唯一标识名称
   name: plugin-dicebear-avatar
 spec:
+  # 关联的 ConfigMap 名称，配置数据将存储在数据库的这个 ConfigMap 中
   configMapName: plugin-dicebear-avatar
   forms:
-    - group: "general"
-      label: "基本配置"
+    # 定义一个配置分组，group 值为 "profile"，在代码中通过 settingFetcher.get("profile") 获取
+    - group: "profile"
+      label: "头像风格"
       formSchema:
+        # 使用下拉选择框组件 ($formkit: select)
+        - $formkit: select
+          name: style
+          label: "风格类型"
+          value: "pixel-art"
+          options:
+            - label: "Thumbs"
+              value: "thumbs"
+            - label: "Shapes"
+              value: "shapes"
+            - label: "Pixel Art"
+              value: "pixel-art"
+            - label: "Notionists"
+              value: "notionists"
+            - label: "Miniavs"
+              value: "miniavs"
+            - label: "Micah"
+              value: "micah"
+            - label: "Lorelei"
+              value: "lorelei"
+            - label: "Identicon"
+              value: "identicon"
+            - label: "Fun Emoji"
+              value: "fun-emoji"
+            - label: "Croodles"
+              value: "croodles"
+            - label: "Bottts"
+              value: "bottts"
+            - label: "Big Smile"
+              value: "big-smile"
+            - label: "Big Ears Neutral"
+              value: "big-ears-neutral"
+            - label: "Big Ears"
+              value: "big-ears"
+            - label: "Avataaars"
+              value: "avataaars"
+            - label: "Adventurer"
+              value: "adventurer"
+        # 使用自定义 HTML 元素 ($el: div) 显示提示信息
         - $el: div
           attrs:
             style: "padding: 15px; background-color: #f0f9eb; border: 1px solid #e1fae1; border-radius: 4px; color: #3c763d;"
@@ -23,6 +65,10 @@ spec:
               attrs:
                 style: "display: block; background: #fff; padding: 5px; margin: 5px 0; border: 1px solid #ddd; border-radius: 3px;"
             - $el: p
-              children: "注意：默认使用第三方 DiceBear 像素艺术 (Pixel Art) 风格API。"
+              children: "注意：保存后强制刷新浏览器页面，因缓存问题刚开始新旧头像交替出现，过几分钟多刷新几次就好了。"
               attrs:
                 style: "margin-top: 5px; color: #8a6d3b;"
+            - $el: p
+              children: "头像效果可参考该链接：https://www.dicebear.com/styles/"
+              attrs:
+                style: "margin-top: 5px;"
