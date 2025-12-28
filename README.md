@@ -4,7 +4,7 @@
 
 ## 简介
 
-这是一个 [Halo](https://halo.run) 2.x 插件，利用 [DiceBear](https://www.dicebear.com/) API 生成有趣的像素艺术 (Pixel Art) 风格头像，用于替换评论区默认的 Gravatar 头像或空白头像。
+这是一个 [Halo](https://halo.run) 2.x 插件，利用 [DiceBear](https://www.dicebear.com/) API 生成独特有趣的头像，可用于替换评论区默认的 Gravatar 头像或空白头像。
 
 ## 效果预览
 
@@ -12,9 +12,10 @@
 
 ## 特性
 
-*   自动为无头像用户生成唯一的像素风格头像。
-*   兼容 Gravatar 协议，通过配置镜像地址即可无缝集成。
+*   自动为无头像用户生成唯一的头像。
+*   兼容 Gravatar 协议，无需配置繁琐的网络和镜像仓库。
 *   轻量级，开箱即用。
+*   头像类型数量多，幽默独特。
 
 ## 安装与使用
 
