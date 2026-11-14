@@ -11,7 +11,6 @@ import reactor.core.scheduler.Schedulers;
 import run.halo.app.plugin.SettingFetcher;
 
 import java.net.URI;
-import java.util.Map;
 
 /**
  * 头像控制器
@@ -88,9 +87,9 @@ public class AvatarController {
      */
     private String fetchStyleFromSettings() {
         try {
-            var val = settingFetcher.get("profile");
+            var val = settingFetcher.getSettingValue("profile");
             if (val != null && !val.isNull() && val.has("style")) {
-                String style = val.get("style").asText();
+                String style = val.get("style").asString();
                 if (style != null && !style.isEmpty()) {
                     return style;
                 }
