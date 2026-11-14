@@ -4,7 +4,7 @@ metadata:
   name: plugin-dicebear-avatar
 spec:
   enabled: true
-  version: 1.0.3
+  version: 1.0.4
   displayName: "Dicebear头像"
   logo: static/logo.svg
   author:
@@ -15,7 +15,7 @@ spec:
   issues: https://github.com/YunJian101/Halo-Plugin-Dicebear-Avatar/issues
   main: com.example.avatar.AvatarPlugin
   description: "替换Halo博客评论组件中的头像，为匿名用户和未上传头像用户提供一个评论区头像"
-  requires: ">=2.21.0"
+  requires: ">=2.23.0"
   license:
     - name: "GPL-3.0"
       url: "https://github.com/YunJian101/Halo-Plugin-Dicebear-Avatar/blob/main/LICENSE"
